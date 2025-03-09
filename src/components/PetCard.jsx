@@ -37,17 +37,17 @@ const PetCard = ({ pet }) => {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 p-4">
+    <div className="p-4 overflow-hidden transition-transform duration-300 transform bg-white shadow-lg rounded-2xl hover:scale-105">
       <img
         src={pet.image || 'https://via.placeholder.com/300'}
         alt={pet.name}
-        className="w-full h-56 object-cover rounded-xl"
+        className="object-cover w-full h-56 rounded-xl"
       />
       <div className="mt-4 text-center">
         <h3 className="text-xl font-bold text-gray-800">{pet.name || 'Unnamed Pet'}</h3>
-        <p className="text-gray-600 mt-1">${pet.price}</p>
-        <p className="text-gray-500 text-sm">{pet.category} - {pet.type}</p>
-        <p className="text-gray-500 text-sm">Age: {pet.age} years | {pet.gender}</p>
+        <p className="mt-1 text-gray-600">{pet.price}</p>
+        <p className="text-sm text-gray-500">{pet.category} - {pet.type}</p>
+        <p className="text-sm text-gray-500">Age: {pet.age} years | {pet.gender}</p>
 
         <button
           onClick={handleAddToCart}
